@@ -18,8 +18,7 @@ names(TyV) <- c('risk','lscd')
 
 ```{r naturalScale, message=FALSE}
 R <- with(TyV, cor(risk, lscd))
-R2 <- with(TyV, cor(risk, lscd))**2
-print(paste("Pearson's R is", R, "and R^2 is", R2, "on the raw data."))
+print(paste("Pearson's R is", R, "and R^2 is", R**2, "on the raw data."))
 ```
 ```
 "Pearson's R is 0.532847471658434 and R^2 is 0.283926428052786 on the raw data."
@@ -29,8 +28,7 @@ print(paste("Pearson's R is", R, "and R^2 is", R2, "on the raw data."))
 
 ```{r log10scale, message=FALSE} 
 Rlog10 <- with(TyV, cor(log10(risk), log10(lscd)))
-R2log10 <- with(TyV, cor(log10(risk), log10(lscd)))**2
-print(paste("Pearson's R is", Rlog10, "and R^2 is", R2log10, "on log10(data)."))
+print(paste("Pearson's R is",Rlog10,"and R^2 is",Rlog10**2,"on log10(data)."))
 ```
 ```
 "Pearson's R is 0.803928553017574 and R^2 is 0.646301118356931 on log10(data)."
